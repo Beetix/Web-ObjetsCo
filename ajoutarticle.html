@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Connectif </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="ressources/style-projet.css">
+	</head>
+
+	<body>
+
+		<header>
+			<h1> Connectif </h1>
+		</header>
+
+		<nav>
+			<ul>
+				<li> <a href="index.html"> Accueil </a> </li>
+				<li> <a href="ajoutarticle.html"> Ajouter un article </a> </li>
+				<li> <a href="rechercherarticle.html"> Rechercher un article </a> </li>
+				<li> <a href="apropos.html"> A propos </a> </li>
+			</ul>
+
+		</nav>
+
+		<section>
+			
+			<h2> Bienvenue dans le monde des objets connectés ! <h2>
+			<p>
+				Vous trouverez ici les dernières actualités et les tests d'objets connectés
+			</p>
+
+		</section>
+		
+		<form method="post">
+			<h1>Ajouter votre article</h1>
+			<fieldset style="width:500px; margin:50px;">
+				<legend>Vos coordonnées</legend>
+				
+					<p>
+						<label>Nom <input type="text" placeholder="NOM"></label>
+					</p>
+					<p>
+						<label>Pseudo <input type="tel" placeholder="Pseudo : par exemple @Louimsdu69">
+						</label>
+						<label>Votre Article </label> </br> <textarea name="contenu_article" rows="4" cols="50" 
+						placeholder="Date de rédaction / Auteur / et contenu"></textarea>
+						</label>
+					</p>
+			</fieldset>
+			<fieldset style="width:500px; margin:50px;">
+				<legend>Votre commande</legend>
+				<p>
+					<label for="pizza">Quelle pizza voulez-vous ?</label><br /> <select
+						name="pizza" id="pizza">
+						    <option value="vide"> </option>
+						<optgroup label="Classiques">
+							<option value="foret">Forestière</option>
+							<option value="nomade">Nomade</option>
+						</optgroup>
+						<optgroup label="Pays">
+							<option value="italie">Italienne</option>
+							<option value="anglaise">Anglaise</option>
+						</optgroup>
+						<optgroup label="Spécialités">
+							<option value="bucheron">Bucheron</option>
+							<option value="royal">Royale</option>
+							<option value="fromage">14 Fromages</option>
+							<option value="pepe">Pepperonni</option>
+						</optgroup>
+					</select>
+				</p>
+				<p>
+					<label>Quantité : <input type="number" value="1" min="1"></label>
+				</p>
+				<p>
+					Diamètre </br>
+					<input type="range" value="25" min="20" max="50" step="5"> <span id="SelRange">25</span></br>
+					<!-- <label>Taille : <select name="taille" id="taille">
+							<option value="1">Normale</option>
+							<option value="2">Grande</option>
+							<option value="3">Géante</option>
+					</select></label> -->
+				</p>
+				<p>
+					Cochez les aliments que vous voulez rajouter :<br /> <input
+						type="checkbox" name="cornichons" id="cornichons" /> <label
+						for="cornichon">Cornichons</label><br /> <input type="checkbox"
+						name="steak" id="steak" /> <label for="steak">Steak haché</label><br />
+					<input type="checkbox" name="emmental" id="emmental" /> <label
+						for="emmental">Emmental</label><br /> <input type="checkbox"
+						name="huitres" id="huitres" /> <label for="huitres">Huitres</label>
+				</p>
+			</fieldset>
+		
+			<button type="submit" value="Envoyer" style="margin:50px">Valider !</button>
+		</form>
+
+
+
+		<footer>
+			<p>Réalisé par De Suremain(String args) { } Louis-Marie et Freeman Benjamin </p>
+
+		</footer>
