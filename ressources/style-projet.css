@@ -11,15 +11,16 @@ header h1 {
 	width: 900px;
 }
 
-img#logo {
+#banniere{
+	color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-image : url("objets-noir.jpg");
+    
 }
 
-img#banniere{
-	/*display: block;*/
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid black;
-    
+#banniere h2{
+	font-size: 1em;
 }
 
 /* Corps */
@@ -69,11 +70,6 @@ nav a:hover {
 
 /* Section */
 
-body > section{
-		   background-image : url("objets.png");
-	   filter:alpha(opacity=30);
-}
-
 section{
     color: #000000;
     font-size: 12pt;  
@@ -93,10 +89,6 @@ ul.padpoint {
 }
 
 
-
-h2{
-	color: #4169e1;
-}
 
 /* Liste pour l'équipe */
 section ul li {
