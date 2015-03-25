@@ -41,15 +41,25 @@
 						<label>Nom <input type="text" placeholder="NOM"></label>
 					</p>
 					<p>
-						<label>Pseudo <input type="tel" placeholder="Pseudo : par exemple @Louimsdu69">
+						<label>Pseudo <input type="texte" name="pseudo" placeholder="Pseudo : par exemple @Louimsdu69">
 						</label>
-						<label>Votre Article </label> </br> <textarea name="contenu_article" rows="4" cols="50" 
-						placeholder="Date de rédaction / Auteur / et contenu"></textarea>
+						<label>Courte description pour que les internanutes puissent mieux vous connaitre ! </label> </br> <textarea name="desc_auteur" rows="4" cols="50" 
+						placeholder="Ex : Etudiant en DUT info, et passionné des technologies mobiles !"></textarea>
 						</label>
 					</p>
-			<button type="submit" value="Envoyer">Valider !</button>
 			</fieldset>
-			
+			<fieldset>
+				<legend>Votre article</legend>
+				
+					<p>
+						<label>Titre de l'article <input type="text" name="titre_article" placeholder="NOM"></label>
+					</p>
+					<p>
+						<label>Votre Article </label> </br> <textarea name="contenu_article" rows="4" cols="50"></textarea>
+						</label>
+					</p>
+			<button type="submit" value="Envoyer">Soumettre !</button>
+			</fieldset>
 		</form>
 
 
