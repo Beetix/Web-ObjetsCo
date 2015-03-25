@@ -1,110 +1,58 @@
-/* Header */
-header {
-	margin-top: 10px;
-	margin-bottom: 5px;
-}
-header * {
-	display: inline-block;
-}
-
-header h1 {
-	width: 900px;
-}
-
-#banniere{
-	color: white;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-image : url("objets-noir.jpg");
-    
-}
-
-#banniere h2{
-	font-size: 1em;
-}
+/** Général **/
 
 /* Corps */
+ 
+body{ font-family: verdana, sans-serif; margin:auto; max-width:900px; min-width: 400px; padding: 0px 5px; }
 
-body{
-	width:1000px;
-	height:600px;
-	margin:auto;
 
-}
+/** Spécifique **/
+
+/* Header */
+header { margin-bottom: 5px; margin-top: 10px; width: 100%;}
+	
+header h1 { background-image : url("objets-noir.jpg"); box-shadow: 5px 5px 5px #888888; color: white; width: 100%; }
 
 /* Menu horizontal */
-nav
-{	
-    border: 2px solid black;
- 	background-color:grey;
-    width:1000px;
-}
+nav { width: 100%; margin-bottom: 20px;}
 
-nav ul{
-	margin-left:auto;
-	margin-right:auto;
-	width:500px;
-}
+nav ul{ border-bottom: 20px; border-image:url("fil.png") 231 5 ; border-top: 0px; display: inline-block; margin-left:auto; margin-right:auto; padding: 0px; width: 80% }
 
-nav ul li
-{
-	list-style-type : none;
-	display: inline-block;
-	color:#4B088A;
-	margin-left:20px;
-	
-}
+nav ul li { display: inherit; list-style-type : none; margin-left: 5px; margin-right: 5px; }
+
+nav img { vertical-align: bottom;}
 
 /* Liens */
-nav a{
-	color: white;
-	text-decoration:none;
-    font-style:italic;
-}
+nav a {color: DarkSlateBlue; font-style:italic; padding: 5px; text-decoration:none; }
 
-nav a:hover {
-	background-color: #AC58FA;
-	color: white;
-}
+nav a:hover { background-color: #AC58FA; color: white; }
 
+/* Bannière */ 
 
-/* Section */
+#banniere{ border: 2px solid black; margin-bottom: 10px;}
 
-section{
-    color: #000000;
-    font-size: 12pt;  
-    vertical-align: top;
-    border: 2px solid black;
-    padding:20px;
-    margin:20px 0px;
-    width:800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Liste sans puces */
-ul.padpoint {
-	list-style-type: none;
-}
+#banniere h1{ font-size: 1.2em; }
 
 
 
-/* Liste pour l'équipe */
-section ul li {
-	margin-bottom: 50px;
-}
+/* Article */
 
- section li img {
-	float: left;
-	margin-right:30px;
- }
+article { border: 2px solid black; display: inline-block; margin-bottom: 10px; padding: 5px; width: 70%;}
 
+article img { border-radius: 200px 200px; float: left; margin-right: 5px;}
+
+/* News */
+
+aside { border: 2px solid black; display: inline-block; vertical-align: top; width: 25%; }
 
 /* Pied de page */
-footer{
-	font-size:10pt;
-	text-align:center;
+footer{ font-size:10pt; text-align:center; }
+
+/** Responsive **/ 
+@media screen and (max-width: 700px) {
+	
+	nav ul { width: 40%;}
+	nav ul li { display: block; margin-left: 0px; margin-right: 0px; }
+	nav a { padding: 2px; }
+	article { width: 100%;}
+	aside { width: 100%;}
 }
-
-
