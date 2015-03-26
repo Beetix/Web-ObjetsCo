@@ -55,9 +55,10 @@ article { background-color:rgb(232, 232, 232); box-shadow: 3px 3px 3px #666666; 
 
 article img { border-radius: 200px 200px; float: left; margin-right: 15px; margin:10px;}
 
-article > section { background-color:#dbe6f0; min-height: 320px;}
+article > section { background-color:Gainsboro; padding: 5px; margin-bottom: 20px;}
+article > section h2 { font-size: 1.2em; text-decoration: underline; }
 
-article > section > p {text-align:justify;}
+article > section > p { font-size: 0.7em; text-align:justify;}
 
 
 
