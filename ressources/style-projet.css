@@ -60,7 +60,7 @@ article > section { background-color:Gainsboro; padding: 5px; margin-bottom: 20p
 article > section h2 { font-size: 1.2em; text-decoration: underline; }
 
 article > section > p { font-size: 0.7em; text-align:justify;}
-
+article > aside {margin-top:30px;}
 
 
 /* News */
