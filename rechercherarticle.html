@@ -28,20 +28,26 @@
 
 
 		<section>
-			<h1>Rechercher article</h1>
+			<h2>Rechercher un article</h2>
 			<form method="post">	
 				<fieldset>
-					<legend>Outils de recherche avancée</legend>
+					<legend>Outils de recherche avancée</legend>				
+						<table>
+							<tr>
+								<th>Mots-clés</th> 
+								<td><input type="text" name="mot-cle" placeholder="Motorola Apple Gorilla Glass"></td>
+								<td rowspan=3><button type="submit" value="Chercher"><img src="ressources/loupe.png" alt="une loupe"/></button> </td>
+							</tr>
+							<tr>
+								<th>Mois (optionnel)</th> 
+								<td><input type="text" name="pseudo" placeholder="Mois, sous la forme 04/2015 pour Avril 2015."></td>
+							</tr>
+							<tr>
+								<th>Auteur (optionnel)</th> 
+								<td><input type="text" name="pseudo" placeholder="Pseudo de l'auteur : par exemple @BenjiLePatron"></td>
+							</tr>
+						</table>
 					
-						<p>
-							<label>Mots-clés <input type="text" name="mot-cle" placeholder="Motorola Apple Gorilla Glass"></label>
-						</p>
-						<p>
-							<label>Mois (optionnel) <input type="texte" name="pseudo" placeholder="Mois, sous la forme 04/2015 pour Avril 2015."></label>
-						<p>
-						<p>
-							<label>Auteur (optionnel) <input type="texte" name="pseudo" placeholder="Pseudo de l'auteur : par exemple @BenjiLePatron"></label>
-				<button type="submit" value="Chercher">Chercher !</button>
 				</fieldset>
 
 			</form>	

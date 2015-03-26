@@ -29,24 +29,24 @@
 		<section>
 		
 			<form method="post">
-				<h1>Ajouter votre article</h1>
+				<h2>Ajouter votre article</h2>
 				<fieldset>
 					<legend>Vos coordonnées</legend>
-					
-						<p>
-							<label>Nom <input type="text" placeholder="NOM"></label>
-						</p>
-						<p>
-							<label>Pseudo <input type="texte" name="pseudo" placeholder="Exemple : @Louimsdu69"></label>
-						<p>
-						<p>
-							<label>E-Mail <input type="texte" name="email" placeholder="leBGduWeb@univ.lyon.fr"></label>
-						<p>
-							<label>Courte description pour que les internautes puissent mieux vous connaitre ! </label> 
-								<textarea name="desc_auteur" rows="4" cols="50" placeholder="Ex : Etudiant en DUT info, et passionné des technologies mobiles !">
-								</textarea>
-							</label>
-						</p>
+						<table>
+							<tr>
+								<label><td>Nom </td><td><input type="text" name="nom" placeholder="NOM"></td></label>
+							</tr>
+							<tr>
+								<label><td>Pseudo</td> <td><input type="text" name="pseudo" placeholder="Exemple : @Louimsdu69"></td></label>
+							<tr>
+							<tr>
+								<label><td>E-Mail </td><td><input type="text" value="" name="email" placeholder="leBGduWeb@univ.lyon.fr"></td></label>
+							<tr>
+						</table>
+						<label>Courte description pour que les internautes puissent mieux vous connaitre ! 
+							<textarea name="desc_auteur" rows="4" cols="50" placeholder="Ex : Etudiant en DUT info, et passionné des technologies mobiles !">
+							</textarea>
+						</label>
 				</fieldset>
 				<fieldset>
 					<legend>Votre article</legend>
@@ -54,8 +54,11 @@
 						<p>
 							<label><input type="text" name="titre_article" placeholder="Titre - 45 carcatères max."></label>
 						</p>
+						<p> Image d'illustration : <br/>
+							<label><input type="file" name="photoarticle" >  <!--  method="post" enctype="multipart/form-data"  Ne passent pas au validateur CSS ... --> </label>
+						</p>
 						<p>
-							<label>Votre Article </label> </br> <textarea name="contenu_article" rows="4" cols="50"></textarea>
+							<label>Contenu <br/> <textarea name="contenu_article" rows="10" cols="50"></textarea>
 							</label>
 						</p>
 				<button type="submit" value="Envoyer">Soumettre !</button>
