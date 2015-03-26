@@ -16,7 +16,7 @@
 		<nav>
 			<ul>
 				<li> <a href="index.html"> Accueil </a> </li>
-				<li> <a href="ajoutarticle.html"> Ajouter un article </a> </li>
+				<li> <a href="ajoutarticle.html" class="actuel"> Ajouter un article </a> </li>
 				<li> <a href="rechercherarticle.html"> Rechercher un article </a> </li>
 				<li> <a href="apropos.html"> A propos </a> </li>
 			</ul>
@@ -27,45 +27,42 @@
 		</nav>
 
 		<section>
-			
-			<h2> Bienvenue dans le monde des objets connectés ! <h2>
-			<p>
-				Vous trouverez ici les dernières actualités et les tests d'objets connectés
-			</p>
+		
+			<form method="post">
+				<h1>Ajouter votre article</h1>
+				<fieldset>
+					<legend>Vos coordonnées</legend>
+					
+						<p>
+							<label>Nom <input type="text" placeholder="NOM"></label>
+						</p>
+						<p>
+							<label>Pseudo <input type="texte" name="pseudo" placeholder="Exemple : @Louimsdu69"></label>
+						<p>
+						<p>
+							<label>E-Mail <input type="texte" name="email" placeholder="leBGduWeb@univ.lyon.fr"></label>
+						<p>
+							<label>Courte description pour que les internautes puissent mieux vous connaitre ! </label> 
+								<textarea name="desc_auteur" rows="4" cols="50" placeholder="Ex : Etudiant en DUT info, et passionné des technologies mobiles !">
+								</textarea>
+							</label>
+						</p>
+				</fieldset>
+				<fieldset>
+					<legend>Votre article</legend>
+					
+						<p>
+							<label><input type="text" name="titre_article" placeholder="Titre - 45 carcatères max."></label>
+						</p>
+						<p>
+							<label>Votre Article </label> </br> <textarea name="contenu_article" rows="4" cols="50"></textarea>
+							</label>
+						</p>
+				<button type="submit" value="Envoyer">Soumettre !</button>
+				</fieldset>
+			</form>
 
 		</section>
-		
-		<form method="post">
-			<h1>Ajouter votre article</h1>
-			<fieldset>
-				<legend>Vos coordonnées</legend>
-				
-					<p>
-						<label>Nom <input type="text" placeholder="NOM"></label>
-					</p>
-					<p>
-						<label>Pseudo <input type="texte" name="pseudo" placeholder="Pseudo : par exemple @Louimsdu69">
-						</label>
-						<label>Courte description pour que les internanutes puissent mieux vous connaitre ! </label> </br> <textarea name="desc_auteur" rows="4" cols="50" 
-						placeholder="Ex : Etudiant en DUT info, et passionné des technologies mobiles !"></textarea>
-						</label>
-					</p>
-			</fieldset>
-			<fieldset>
-				<legend>Votre article</legend>
-				
-					<p>
-						<label>Titre de l'article <input type="text" name="titre_article" placeholder="NOM"></label>
-					</p>
-					<p>
-						<label>Votre Article </label> </br> <textarea name="contenu_article" rows="4" cols="50"></textarea>
-						</label>
-					</p>
-			<button type="submit" value="Envoyer">Soumettre !</button>
-			</fieldset>
-		</form>
-
-
 
 		<footer>
 			<p>Réalisé par De Suremain(String args) { } Louis-Marie et Freeman Benjamin </p>
