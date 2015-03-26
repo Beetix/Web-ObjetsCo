@@ -4,6 +4,8 @@
 #corps > aside > h2 {color:rgb(137, 61, 12)}
 #corps > article > h2 {color:rgb(124,13,68)}
 
+a { text-decoration:  none; color: inherit;  }
+
 
 /** GENERAL **/
 
@@ -50,11 +52,10 @@ nav ul a:hover { background-color: #700b7d; color: white; box-shadow: 3px 3px 3p
 
 article { background-color:rgb(232, 232, 232); box-shadow: 3px 3px 3px #666666; display: inline-block; margin-bottom: 10px;  margin-right:2%; outline: 1px solid black; padding:0px 2% 0px 2% ; text-align:justify; width:90%; }
 
-	/*Pour les articles qui doivent cohabiter avec un menu latéral (le div nommé corps)*/
-	#corps > article {  width: 67%; }
+/*Pour les articles qui doivent cohabiter avec un menu latéral (le div nommé corps)*/
+#corps > article {  width: 67%; }
 
 article img { border-radius: 200px 200px; float: left; margin-right: 15px; margin:10px;}
-
 article > section { background-color:Gainsboro; padding: 5px; margin-bottom: 20px;}
 article > section h2 { font-size: 1.2em; text-decoration: underline; }
 
