@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title> Connectif </title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="ressources/style-projet.css">
-	</head>
+<?php
+include 'header.php';
+?>
 
 	<body>
 
@@ -13,10 +11,10 @@
 			<h1> Connectif </h1>
 			<nav>
 				<ul>
-					<li> <a href="index.html"> Accueil </a> </li>
-					<li> <a href="ajoutarticle.html"> Ajouter un article </a> </li>
-					<li> <a href="rechercherarticle.html" class="actuel"> Rechercher un article </a> </li>
-					<li> <a href="apropos.html"> A propos </a> </li>
+					<li> <a href="index.php"> Accueil </a> </li>
+					<li> <a href="ajoutarticle.php"> Ajouter un article </a> </li>
+					<li> <a href="rechercherarticle.php" class="actuel"> Rechercher un article </a> </li>
+					<li> <a href="apropos.php"> A propos </a> </li>
 				</ul>
 	
 				<img src="ressources/prise.png" alt="prise">
@@ -29,14 +27,14 @@
 
 		<section>
 			<h2>Rechercher un article</h2>
-			<form method="post" action="resultat_recherche.html">	
+			<form method="post" action="resultat_recherche.php">	
 				<fieldset>
 					<legend>Outils de recherche avancée</legend>				
 						<table>
 							<tr>
 								<th>Mots-clés</th> 
 								<td><input type="text" name="mot-cle" placeholder="Motorola Apple Gorilla Glass"></td>
-								<td rowspan=3><button type="submit" value="rechercher">Recherche</button> </td>
+								<td rowspan=3><button type="submit" value="rechercher"><img src="ressources/Loupe.png"></button> </td>
 							</tr>
 							<tr>
 								<th>Mois (optionnel)</th> 

@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title> Connectif </title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="ressources/style-projet.css">
-	</head>
+	<?php
+	include 'header.php';
+	?>
 
 	<body>
 
@@ -13,10 +11,10 @@
 			<h1> Connectif </h1>
 			<nav>
 				<ul>
-					<li> <a href="index.html"> Accueil </a> </li>
-					<li> <a href="ajoutarticle.html"> Ajouter un article </a> </li>
-					<li> <a href="rechercherarticle.html"> Rechercher un article </a> </li>
-					<li> <a href="apropos.html" class="actuel"> A propos </a> </li>
+					<li> <a href="index.php"> Accueil </a> </li>
+					<li> <a href="ajoutarticle.php"> Ajouter un article </a> </li>
+					<li> <a href="rechercherarticle.php"> Rechercher un article </a> </li>
+					<li> <a href="apropos.php" class="actuel"> A propos </a> </li>
 				</ul>
 	
 				<img src="ressources/prise.png" alt="prise">
