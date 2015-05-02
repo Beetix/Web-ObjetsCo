@@ -3,6 +3,23 @@
 	{
 		session_start();
 		include ('connectdb.php');
+
+		// Protection sur les données envoyées
+
+		if (isset($_POST))
+		{
+			foreach ($_POST as $key => $value) {
+				$_POST[$key] = htmlspecialchars($value);
+			}
+		}
+
+		if (isset($_GET))
+		{
+			foreach ($_GET as $key => $value) {
+				$_GET[$key] = htmlspecialchars($value);
+			}
+		}
+
 ?>
 		<!DOCTYPE html>
 		<html>

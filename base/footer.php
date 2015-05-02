@@ -1,4 +1,4 @@
-		<footer>
-			<p>Réalisé par De Suremain Louis-Marie et Freeman Benjamin </p>
+<footer>
+	<p>RÃ©alisÃ© par De Suremain Louis-Marie et Freeman Benjamin </p>
 
-		</footer>
+</footer>

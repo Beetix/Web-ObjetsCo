@@ -34,7 +34,7 @@
 							</tr>
 						</table>
 						<label>Courte description pour que les internautes puissent mieux vous connaitre ! 
-							<textarea name="utilisteur_desc" rows="4" cols="50" placeholder="Ex : Etudiant en DUT info, et passionnÃ© des technologies mobiles !">
+							<textarea name="utilisteur_desc" rows="4" cols="50" placeholder="Ex : Etudiant en DUT info, et passionnÃƒÂ© des technologies mobiles !">
 							</textarea>
 						</label>
 				</fieldset>
@@ -42,10 +42,10 @@
 					<legend>Votre article</legend>
 					
 						<p>
-							<label><input type="text" name="article_titre" placeholder="Titre - 45 carcatÃ¨res max."></label>
+							<label><input type="text" name="article_titre" placeholder="Titre - 45 carcatÃƒÂ¨res max."></label>
 						</p>
 						<p>
-							<label><input type="text" name="article_stitre" placeholder="Sous-titre - 150 carcatÃ¨res max."></label>
+							<label><input type="text" name="article_stitre" placeholder="Sous-titre - 150 carcatÃƒÂ¨res max."></label>
 						</p>
 						<p> Image d'illustration : <br/>
 							<label><input type="hidden" name="MAX_FILE_SIZE" value="1048576" >
@@ -66,9 +66,9 @@
 
 			
 			
-			// traitement de l'ajout des données
+			// traitement de l'ajout des donnÃ©es
 			include("./connectdb.php");
-			$bdd = Connect_db(); //connexion à la BDD
+			$bdd = Connect_db(); //connexion Ã  la BDD
 			$query=$bdd->prepare('
 
 						INSERT INTO bdd_article (`utilisateur_id`, `article_titre`, `article_stitre`, `article_contenu`) 
@@ -83,7 +83,7 @@
 							);
 			
 			
-			// paramètres et exécution
+			// paramÃ¨tres et exÃ©cution
 					
 			
 			
@@ -92,7 +92,7 @@
 			//if erreurs 
 			
 			//{
-			//	afficher message d'erreur et ne pas ajouter d'entrée sur la bbd
+			//	afficher message d'erreur et ne pas ajouter d'entrÃ©e sur la bbd
 			//}
 			
 			//else 
@@ -115,16 +115,16 @@
 			*/
 			
 			?>
-			<h2> <?php echo "Bravo, vous avez ajouté votre article !"; ?> </h2>
+			<h2> <?php echo "Bravo, vous avez ajoutÃ© votre article !"; ?> </h2>
 			<article>
 					<h2> <?php echo "Votre titre"; ?> </h2>
 					<?php 
 					//echo "<img src=".getchemin" alt=".getname.">";
 					?>
-					<h3> <?php echo "Votre sous-titre (éventuel ?) "; ?> </h3>
+					<h3> <?php echo "Votre sous-titre (Ã©ventuel ?) "; ?> </h3>
 
 					<p> 
-					<?php echo "contenu de l'article à récupérer"; ?>
+					<?php echo "contenu de l'article Ã  rÃ©cupÃ©rer"; ?>
 					</p>
 			</article>
 

@@ -10,8 +10,8 @@
 		
 		if (!isset($_GET['article_id'])) 
 		{
-		// code à exécuter si invalide
-		echo "Vous n'avez pas défini d'article à visualiser ou l'article demandé n'existe pas.";
+		// code Ã  exÃ©cuter si invalide
+		echo "Vous n'avez pas dÃ©fini d'article Ã  visualiser ou l'article demandÃ© n'existe pas.";
 		} 
 		else
 		{
@@ -21,9 +21,9 @@
 			//$userid = (int) $_GET['user_id'];
 
 			if (count($_POST) > 0)
-			// executer procédure pour ajouter le commentaire
+			// executer procÃ©dure pour ajouter le commentaire
 			{
-				$bdd = Connect_db(); //connexion à la BDD
+				$bdd = Connect_db(); //connexion Ã  la BDD
 				/*
 				$query_name= $bdd -> prepare('SELECT `utilisateur_name` FROM `bdd_utilisateurs` WHERE `utilisateur_id`= :userid;
 											 VALUES (:userid)');
@@ -54,9 +54,9 @@
 				);
 			}
 
-			// TODO Il faut remplacer le vieux userid du formulaire par lecture du cookie et du numéro d'utilisateur
+			// TODO Il faut remplacer le vieux userid du formulaire par lecture du cookie et du numÃ©ro d'utilisateur
 
-			// Faire la requete qui récupère toutes les données de l'article dont l'id est dans $GET
+			// Faire la requete qui rÃ©cupÃ¨re toutes les donnÃ©es de l'article dont l'id est dans $GET
 					
 					$bdd = Connect_db();
 					$querysolo = $bdd->prepare('SELECT * FROM  `bdd_article` WHERE article_id = :id');
@@ -89,7 +89,7 @@
 												{
 												?>
 													<p>
-														<?php echo $com['com_id'].' id de l\'auteur. '; ?> posté le <?php echo $com['com_date'].'.' ?>
+														<?php echo $com['com_id'].' id de l\'auteur. '; ?> postÃ© leÂ <?php echo $com['com_date'].'.' ?>
 													</p>
 													<p>
 													<?php echo " - ".$com['com_contenu']; ?>
@@ -99,7 +99,7 @@
 												$querycom->closeCursor();
 
 
-										// et rajouter test pour savoir si la personne est connectée
+										// et rajouter test pour savoir si la personne est connectÃ©e
 										// si oui, afficher :
 										{
 										?>
@@ -108,10 +108,10 @@
 													<legend>Votre commentaire</legend>
 												
 														<p>
-															<label> Titre : <input type="text" name="com_titre" placeholder="Titre ou Pseudo - 45 carcatères max."></label>
+															<label> Titre : <input type="text" name="com_titre" placeholder="Titre ou Pseudo - 45 carcatÃ¨res max."></label>
 														</p>
 														<p>
-															<label> Votre numéro d'utilisateur : <input type="text" name="utilisateur_id" placeholder="Numéro d'utilsateur. (1 : admin et 0 user)"></label>
+															<label> Votre numÃ©ro d'utilisateur : <input type="text" name="utilisateur_id" placeholder="NumÃ©ro d'utilsateur. (1 : admin et 0 user)"></label>
 														</p>
 														<p>
 															<label>Contenu : <br/> <textarea type="text" name="com_contenu" rows="10" cols="50"></textarea>
@@ -121,11 +121,11 @@
 												</form>
 											</fieldset>
 										<?php 
-										// else if (non connecté)
-										// Si non connecté, afficher :
+										// else if (non connectÃ©)
+										// Si non connectÃ©, afficher :
 										?>
 										
-																<h2> Vous devez être connecté pour ajouter un commentaire. <a href="authentification.php">Se connecter</a> </h2>
+																<h2> Vous devez Ãªtre connectÃ© pour ajouter un commentaire. <a href="authentification.php">Se connecter</a> </h2>
 										
 										</section>
 								</article>

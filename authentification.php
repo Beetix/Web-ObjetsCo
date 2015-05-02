@@ -26,14 +26,14 @@
 			</article>
 			
 			<article>
-				<h2>Je crée un compte :</h2>
+				<h2>Je crÃ©e un compte :</h2>
 				<form  method="post" enctype="multipart/form-data" action=""  >
 					<table>
 						<tr><td>Adresse Mail</td><td><input type="text" name="nomcrea" ></td></tr>
 						<tr><td>Nom</td><td><input type="text" name="nomcrea" ></td></tr>
 						<tr><td>Mot de passe</td><td><input type="password" name="mdpcrea" ></td></tr>
-						<tr><td>Vérification du mot de passe</td><td><input type="password" name="mdpcreaverif" ></td></tr>
-						<tr><td></td><td><button type="submit" > Créer un compte </button></td></tr>
+						<tr><td>VÃ©rification du mot de passe</td><td><input type="password" name="mdpcreaverif" ></td></tr>
+						<tr><td></td><td><button type="submit" > CrÃ©er un compte </button></td></tr>
 						<tr></tr>
 					</table>
 				</form>
@@ -57,7 +57,7 @@
 					
 					
 			// traitement de la connexion
-			$bdd = Connect_db(); //connexion à la BDD
+			$bdd = Connect_db(); //connexion Ã  la BDD
 			$query=$bdd->prepare('SELECT * FROM bdd_utilisateur (`utilisateur_mdp`, `utilisateur_pseudo`)
 								VALUES
 								(:utilmdp,:utilnom);'
