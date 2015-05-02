@@ -1,32 +1,11 @@
-<?php 
-include 'connectdb.php';
-?>
-<!DOCTYPE html>
-<html>
 <?php
-include 'header.php';
+	require('base/init.php');
+
+	init('index');
+
+	function index()
+	{
 ?>
-
-	<body>
-
-		<header>
-			<h1> Connectif </h1>
-			<nav>
-				<ul>
-					<li> <a href="index.php" class="actuel"> Accueil </a> </li>
-					<li> <a href="ajoutarticle.php"> Ajouter un article </a> </li>
-					<li> <a href="rechercherarticle.php"> Rechercher un article </a> </li>
-					<li> <a href="apropos.php"> A propos </a> </li>
-					<li> <a href="authentification.php"> Se connecter </a> </li>
-				</ul>
-	
-				<a href="index.php" ><img src="ressources/prise.png" alt="prise"></a>
-	
-			</nav>
-		</header>
-
-
-
 		<section id="banniere">
 			
 			<h2> Bienvenue dans le monde des objets connectés ! </h2>
@@ -129,70 +108,8 @@ include 'header.php';
 			<?php 
 			}
 			$query->closeCursor();
-			?>
 			
-			<article>
-					<h2> <a href="article.php"> La moto 360 </a> </h2>
-					<img src="ressources/moto360.jpg" alt="moto360">
-					
-					<h3> Le petit bijou de Motorola </h3>
+	}
+			?>
 		
-					<p> 
-						Nous avons pu mettre la main dessus... elle est superbe ! Vous avez envie d'enrichir votre expérience android, cette montre est pour vous.
-						Nous avons pu mettre la main dessus... elle est superbe ! Vous avez envie d'enrichir votre expérience android, cette montre est pour vous.
-						Nous avons pu mettre la main dessus... elle est superbe ! Vous avez envie d'enrichir votre expérience android, cette montre est pour vous.
-						Nous avons pu mettre la main dessus... elle est superbe ! Vous avez envie d'enrichir votre expérience android, cette montre est pour vous.
-						Nous avons pu mettre la main dessus... elle est superbe ! Vous avez envie d'enrichir votre expérience android, cette montre est pour vous.
-					</p>
-
-					<section>
-						<h2> Commentaires </h2>
-						<p>
-							Toto � 22:55 la 26/03 - Blabla...
-						<p>
-						<p>
-							Tutu � 20:12 la 26/03 - Blabla...
-						<p>
-						<p>
-							Tata � 19:35 la 26/03 - Blabla...
-						<p>
-					</section>
-			</article>
-			<article>
-					<h2> Les cubes Sifteo </h2>
-					<img src="ressources/cubesconnecte.jpeg" alt="Quelqu'un joue avec des cubes connectés.">
-					
-					<h3> Une startup qui innove ! </h3>
 		
-					<p> 
-						Pour prendre une place dans ce monde connecté, la société Sifteo a mis au point des cubes connectés.
-						 Ce syst�me de divertissement est unique en son genre.
-						  Le concept de cette création consiste à jouer avec plusieurs cubes connectés que l’ont fait interagir entre eux.
-						  Pour prendre une place dans ce monde connecté, la société Sifteo a mis au point des cubes connectés.
-						 Ce syst�me de divertissement est unique en son genre.
-						  Le concept de cette création consiste à jouer avec plusieurs cubes connectés que l’ont fait interagir entre eux.
-					</p>
-
-					<section>
-						<h2> Commentaires </h2>
-						<p>
-							Toto � 22:55 la 26/03 - Blabla...
-						</p>
-						<p>
-							Tutu � 20:12 la 26/03 - Blabla...
-						</p>
-						<p>
-							Tata � 19:35 la 26/03 - Blabla...
-						</p>
-					</section>
-
-			</article>
-			</div>
-
-		<footer>
-			<p>R�alis� par De Suremain Louis-Marie et Freeman Benjamin </p>
-
-		</footer>
-	</body>
-
-</html>

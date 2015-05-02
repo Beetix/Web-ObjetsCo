@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html>
+<?php
+	require('base/init.php');
 
-	<head>
-		<title> Connectif </title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="ressources/style-projet.css">
-	</head>
+	init('resultat_recherche');
 
-	<body>
-
-		<header>
-			<h1> Connectif </h1>
-			<nav>
-				<ul>
-					<li> <a href="index.php"> Accueil </a> </li>
-					<li> <a href="ajoutarticle.php"> Ajouter un article </a> </li>
-					<li> <a href="rechercherarticle.php" class="actuel"> Rechercher un article </a> </li>
-					<li> <a href="apropos.php"> A propos </a> </li>
-				</ul>
-	
-				<img src="ressources/prise.png" alt="prise">
-	
-			</nav>
-		</header>
-		
-
-
-
+	function resultat_recherche()
+	{
+?>
 		<section>
 			<article>
 
@@ -76,10 +55,6 @@
 			</article>
 		</section>
 
-		<footer>
-			<p>Réalisé par De Suremain Louis-Marie et Freeman Benjamin </p>
-
-		</footer>
-	</body>
-
-</html>
+<?php
+	}
+?>

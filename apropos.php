@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html>
+<?php
+	require('base/init.php');
 
-	<?php
-	include 'header.php';
-	?>
+	init('apropos');
 
-	<body>
-
-		<header>
-			<h1> Connectif </h1>
-			<nav>
-				<ul>
-					<li> <a href="index.php"> Accueil </a> </li>
-					<li> <a href="ajoutarticle.php"> Ajouter un article </a> </li>
-					<li> <a href="rechercherarticle.php"> Rechercher un article </a> </li>
-					<li> <a href="apropos.php" class="actuel"> A propos </a> </li>
-				</ul>
-	
-				<img src="ressources/prise.png" alt="prise">
-	
-	
-			</nav>
-		</header>
-
+	function apropos()
+	{
+?>
 		
 		<section>
 			<h2> A propos </h2>
@@ -54,8 +37,6 @@
 			</article>
 		</section>
 
-
-		<footer>
-			<p>Réalisé par De Suremain Louis-Marie et Freeman Benjamin </p>
-
-		</footer>
+<?php
+	}
+?>

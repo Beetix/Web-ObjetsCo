@@ -1,30 +1,11 @@
-
-
-<html>
-
 <?php
-include 'header.php';
+	require('base/init.php');
+
+	init('ajoutarticle');
+
+	function ajoutarticle()
+	{
 ?>
-
-	<body>
-
-		<header>
-			<h1> Connectif</h1>
-		</header>
-
-		<nav>
-			<ul>
-				<li> <a href="index.php"> Accueil </a> </li>
-				<li> <a href="ajoutarticle.php" class="actuel"> Ajouter un article </a> </li>
-				<li> <a href="rechercherarticle.php"> Rechercher un article </a> </li>
-				<li> <a href="apropos.php"> A propos </a> </li>
-			</ul>
-
-			<img src="ressources/prise.png" alt="prise">
-
-
-		</nav>
-
 		<section>
 		<?php
 
@@ -32,7 +13,7 @@ include 'header.php';
 		 
 			 
 		 print_r($_POST);
-	 
+
 		 if (count($_POST) <= 0) 
 		 //(!isset($utilisateur_id,$utilisateur_pseudo,$utilisateur_mail,$article_titre,$article_stitre,$article_photo,$article_contenu))
 		{
@@ -77,11 +58,11 @@ include 'header.php';
 				<button type="submit" value="Envoyer">Soumettre !</button>
 				</fieldset>
 			</form>
-		
+
 		<?php 
 		}
 		else {
-		
+
 
 			
 			
@@ -89,7 +70,7 @@ include 'header.php';
 			include("./connectdb.php");
 			$bdd = Connect_db(); //connexion ‡ la BDD
 			$query=$bdd->prepare('
- 	
+
 						INSERT INTO bdd_article (`utilisateur_id`, `article_titre`, `article_stitre`, `article_contenu`) 
 						VALUES
 						(:userid,:titre,:soustitre,:content);'
@@ -141,24 +122,20 @@ include 'header.php';
 					//echo "<img src=".getchemin" alt=".getname.">";
 					?>
 					<h3> <?php echo "Votre sous-titre (Èventuel ?) "; ?> </h3>
-		
+
 					<p> 
 					<?php echo "contenu de l'article ‡ rÈcupÈrer"; ?>
 					</p>
 			</article>
-		
+
 			<?php 
 			
 			}
 			?>
-		
-		
+
+
 		</section>
 
-		<footer>
-			<p>R√©alis√© par De Suremain Louis-Marie et Freeman Benjamin </p>
-
-		</footer>
-		
-	</body>
-</html>
+<?php
+	}
+?>
