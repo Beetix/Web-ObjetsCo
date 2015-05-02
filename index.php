@@ -34,12 +34,12 @@
 
 		?>
 				
-				<h2> <a href="article.php"> Dernier article ajouté :  <?php echo $dernierarticle['article_titre']; ?> </a> </h2>
+				<?php echo '<h2> <a href="article.php?article_id=' . $dernierarticle['article_id'] . '"> Dernier article ajouté : ' . $dernierarticle['article_titre'] . '</a> </h2>'; ?>
 							<img src="ressources/<?php echo $dernierarticle['article_titre']; ?>.jpg" alt="<?php echo $dernierarticle['article_titre']; ?>">
 								
 							<h3>  <?php echo $dernierarticle['article_stitre']; ?> </h3>
 							
-							<p> <?php echo mb_strimwidth($dernierarticle['article_contenu'], 0, 100); ?> </p>
+							<p> <?php echo substr($dernierarticle['article_contenu'], 0, 100); ?> </p>
 			<?php
 
 				$reqcom = $bdd->query('SELECT *

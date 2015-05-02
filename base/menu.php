@@ -1,10 +1,19 @@
+<?php
+	$pages = array('index' => 'Accueil', 'ajoutarticle' => array('Ajouter un article', 'webmaster'), 'rechercherarticle' => 'Rechercher un article', 'apropos' => 'A propos', 'authentification' => 'Se connecter'); 
+?>
 <nav>
 	<ul>
-		<li> <a href="index.php" class="actuel"> Accueil </a> </li>
-		<li> <a href="ajoutarticle.php"> Ajouter un article </a> </li>
-		<li> <a href="rechercherarticle.php"> Rechercher un article </a> </li>
-		<li> <a href="apropos.php"> A propos </a> </li>
-		<li> <a href="authentification.php"> Se connecter </a> </li>
+<?php
+	foreach ($pages as $fichier => $texte) {
+		if (!is_array($texte) or isset($_SESSION['est_admin'])) // L'information webmaster est le fait d'utiliser une array ou non
+		{	
+			if (!strcmp($callback, $fichier))
+				echo '<li> <a href="' . $fichier . '.php" class="actuel">' . $texte . '</a> </li>';
+			else
+				echo '<li> <a href="' . $fichier . '.php">' . $texte . '</a> </li>';
+		}
+	}
+?>
 	</ul>
 
 	<a href="index.php" ><img src="ressources/prise.png" alt="prise"></a>
