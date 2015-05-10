@@ -23,10 +23,10 @@
 		<?php 
 			$bdd = Connect_db();
 			$reqarticle = $bdd->query('SELECT *
-											FROM  `bdd_article` 
+											FROM  articles 
 											WHERE article_date = ( 
 											SELECT MAX( article_date ) 
-											FROM  `bdd_article` )');
+											FROM  articles )');
 			$dernierarticle = $reqarticle->fetch();
 			$reqarticle->closeCursor();
 			if (!empty($dernierarticle))
@@ -43,11 +43,11 @@
 			<?php
 
 				$reqcom = $bdd->query('SELECT *
-										FROM bdd_commentaire
-										INNER JOIN bdd_utilisateurs
+										FROM commentaires
+										INNER JOIN utilisateurs
 										ON utilisateur_id = com_ref_auteur_id
 										WHERE com_date = (SELECT MAX(com_date)
-															FROM bdd_commentaire
+															FROM commentaires
 															WHERE com_ref_article_id = ' . $dernierarticle['article_id'] . ')
 										');
 				$derniercom = $reqcom->fetch();

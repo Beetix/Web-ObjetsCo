@@ -29,32 +29,46 @@
 		if (!empty($_POST['mot-cle']))
 		{
 			$bdd = Connect_db();
-			$reqrech = $bdd->prepare('SELECT article_date, article_titre, article_stitre, article_contenu FROM bdd_article WHERE article_titre LIKE :mot OR article_stitre LIKE :mot OR article_contenu LIKE :mot');
+			$reqrech = $bdd->prepare('SELECT article_date, article_titre, article_stitre, article_contenu FROM articles WHERE article_titre LIKE :mot OR article_stitre LIKE :mot OR article_contenu LIKE :mot');
 			$reqrech->execute(array('mot' => '%' . $_POST['mot-cle'] . '%'));
 
 	?>
 		<section id='resultats'>
 				<h2> Résultats </h2>
-				<table>
-						<tr>
-							<th>Date</th> 
-							<th>Titre</th> 
-							<th>Sous-Titre</th>
-							<th>Contenu</th>
-						</tr>
+				
 					<?php
-						while($resultat = $reqrech->fetch(PDO::FETCH_ASSOC))
-						{
-							echo '<tr>';
 
-							foreach ($resultat as $valeur) {
-								$texte = substr($valeur, 0, 50);
-								if(strlen($valeur) > 50)
-									$texte = $texte . '...';
-								echo '<td>' . $texte . '</td>';
-							}
-							echo '</tr>';
+						if (!$resultat = $reqrech->fetch(PDO::FETCH_ASSOC))
+						{
+							echo '<h3> Article(s) introuvable(s)... </h3>'; 
 						}
+						else
+						{
+					?>
+							<table>
+								<tr>
+									<th>Date</th> 
+									<th>Titre</th> 
+									<th>Sous-Titre</th>
+									<th>Contenu</th>
+								</tr>
+					<?php
+							do							
+							{
+
+								echo '<tr>';
+
+								foreach ($resultat as $valeur) {
+									$texte = substr($valeur, 0, 50);
+									if(strlen($valeur) > 50)
+										$texte = $texte . '...';
+									echo '<td>' . $texte . '</td>';
+								}
+								echo '</tr>';
+							}
+							while($resultat = $reqrech->fetch(PDO::FETCH_ASSOC));
+						}
+						$reqrech->closeCursor();
 					?>
 				</table>
 		</section>
