@@ -8,13 +8,13 @@
 ?>
 		<section id="banniere">
 			
-			<h2> Bienvenue dans le monde des objets connectÃ©s ! </h2>
+			<h2> Bienvenue dans le monde des objets connectés ! </h2>
 			
 			<p>
-				Vous trouverez ici les derniÃ¨res actualitÃ©s et les tests d'objets connectÃ©s
+				Vous trouverez ici les dernières actualités et les tests d'objets connectés
 			</p>
 			
-			<p> <i> DerniÃ¨re mise Ã Â  jour du site web le 01/05/2015 </i> </p>
+			<p> <i> Dernière mise à  jour du site web le 01/05/2015 </i> </p>
 
 		</section>
 		

@@ -21,31 +21,13 @@
 			<form method="post" enctype="multipart/form-data" action="" >
 				<h2>Ajouter votre article</h2>
 				<fieldset>
-					<legend>Vos coordonn√©es</legend>
-						<table>
-							<tr>
-								<td>Nom </td><td><input type="text" name="utilisateur_id" placeholder="NOM"></td>
-							</tr>
-							<tr>
-								<td>Pseudo</td> <td><input type="text" name="utilisateur_pseudo" placeholder="Exemple : @Louimsdu69"></td>
-							</tr>
-							<tr>
-								<td>E-Mail </td><td><input type="text" value="" name="utilisateur_mail" placeholder="leBGduWeb@univ.lyon.fr"></td>
-							</tr>
-						</table>
-						<label>Courte description pour que les internautes puissent mieux vous connaitre ! 
-							<textarea name="utilisteur_desc" rows="4" cols="50" placeholder="Ex : Etudiant en DUT info, et passionn√É¬© des technologies mobiles !">
-							</textarea>
-						</label>
-				</fieldset>
-				<fieldset>
 					<legend>Votre article</legend>
 					
 						<p>
-							<label><input type="text" name="article_titre" placeholder="Titre - 45 carcat√É¬®res max."></label>
+							<label><input type="text" name="article_titre" placeholder="Titre - 45 carcatËres max."></label>
 						</p>
 						<p>
-							<label><input type="text" name="article_stitre" placeholder="Sous-titre - 150 carcat√É¬®res max."></label>
+							<label><input type="text" name="article_stitre" placeholder="Sous-titre - 150 carcatËres max."></label>
 						</p>
 						<p> Image d'illustration : <br/>
 							<label><input type="hidden" name="MAX_FILE_SIZE" value="1048576" >
@@ -67,23 +49,22 @@
 			
 			
 			// traitement de l'ajout des donn√©es
-			include("./connectdb.php");
 			$bdd = Connect_db(); //connexion √† la BDD
 			$query=$bdd->prepare('
 
-						INSERT INTO bdd_article (`utilisateur_id`, `article_titre`, `article_stitre`, `article_contenu`) 
+						INSERT INTO articles (`utilisateur_id`, `article_titre`, `article_stitre`, `article_contenu`) 
 						VALUES
 						(:userid,:titre,:soustitre,:content);'
 			);
 			$query->execute(array
-					('userid' => $_POST['utilisateur_id'],
+					('userid' => $_SESSION['utilid'],
 					'titre' => $_POST['article_titre'],
 					'soustitre' => $_POST['article_stitre'],
 					'content' => $_POST['article_contenu'] ) 
 							);
 			
 			
-			// param√®tres et ex√©cution
+			// paramËtres et exÈcution
 					
 			
 			
@@ -92,7 +73,7 @@
 			//if erreurs 
 			
 			//{
-			//	afficher message d'erreur et ne pas ajouter d'entr√©e sur la bbd
+			//	afficher message d'erreur et ne pas ajouter d'entrÈe sur la bbd
 			//}
 			
 			//else 
@@ -115,16 +96,16 @@
 			*/
 			
 			?>
-			<h2> <?php echo "Bravo, vous avez ajout√© votre article !"; ?> </h2>
+			<h2> <?php echo "Bravo, vous avez ajoutÈ votre article !"; ?> </h2>
 			<article>
 					<h2> <?php echo "Votre titre"; ?> </h2>
 					<?php 
 					//echo "<img src=".getchemin" alt=".getname.">";
 					?>
-					<h3> <?php echo "Votre sous-titre (√©ventuel ?) "; ?> </h3>
+					<h3> <?php echo "Le sous-titre (Èventuel ?) "; ?> </h3>
 
 					<p> 
-					<?php echo "contenu de l'article √† r√©cup√©rer"; ?>
+					<?php echo "contenu de l'article ‡† rÈcupÈrer"; ?>
 					</p>
 			</article>
 
