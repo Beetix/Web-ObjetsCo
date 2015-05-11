@@ -9,11 +9,6 @@
 		<section>
 		<?php
 
-		 
-		 
-			 
-		 print_r($_POST);
-
 		 if (count($_POST) <= 0) 
 		 //(!isset($utilisateur_id,$utilisateur_pseudo,$utilisateur_mail,$article_titre,$article_stitre,$article_photo,$article_contenu))
 		{
@@ -24,10 +19,10 @@
 					<legend>Votre article</legend>
 					
 						<p>
-							<label><input type="text" name="article_titre" placeholder="Titre - 45 carcatères max."></label>
+							<label><input type="text" name="article_titre" placeholder="Titre - 45 carcatÃ¨res max."></label>
 						</p>
 						<p>
-							<label><input type="text" name="article_stitre" placeholder="Sous-titre - 150 carcatères max."></label>
+							<label><input type="text" name="article_stitre" placeholder="Sous-titre - 150 carcatÃ¨res max."></label>
 						</p>
 						<p> Image d'illustration : <br/>
 							<label><input type="hidden" name="MAX_FILE_SIZE" value="1048576" >
@@ -48,8 +43,8 @@
 
 			
 			
-			// traitement de l'ajout des donnÃ©es
-			$bdd = Connect_db(); //connexion Ã  la BDD
+			// traitement de l'ajout des donnÃƒÂ©es
+			$bdd = Connect_db(); //connexion ÃƒÂ  la BDD
 			$query=$bdd->prepare('
 
 						INSERT INTO articles (`utilisateur_id`, `article_titre`, `article_stitre`, `article_contenu`) 
@@ -64,7 +59,7 @@
 							);
 			
 			
-			// paramètres et exécution
+			// paramÃ¨tres et exÃ©cution
 					
 			
 			
@@ -73,7 +68,7 @@
 			//if erreurs 
 			
 			//{
-			//	afficher message d'erreur et ne pas ajouter d'entrée sur la bbd
+			//	afficher message d'erreur et ne pas ajouter d'entrÃ©e sur la bbd
 			//}
 			
 			//else 
@@ -96,16 +91,16 @@
 			*/
 			
 			?>
-			<h2> <?php echo "Bravo, vous avez ajouté votre article !"; ?> </h2>
+			<h2> <?php echo "Bravo, vous avez ajoutÃ© votre article !"; ?> </h2>
 			<article>
 					<h2> <?php echo "Votre titre"; ?> </h2>
 					<?php 
 					//echo "<img src=".getchemin" alt=".getname.">";
 					?>
-					<h3> <?php echo "Le sous-titre (éventuel ?) "; ?> </h3>
+					<h3> <?php echo "Le sous-titre (Ã©ventuel ?) "; ?> </h3>
 
 					<p> 
-					<?php echo "contenu de l'article à  récupérer"; ?>
+					<?php echo "contenu de l'article Ã Â  rÃ©cupÃ©rer"; ?>
 					</p>
 			</article>
 

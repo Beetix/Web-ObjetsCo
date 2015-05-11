@@ -16,9 +16,13 @@
 				echo '<li> <a href="' . $fichier . '.php">' . $texte . '</a> </li>';
 		}
 	}
+	if (isset($_SESSION['est_admin']))
+	{
+		echo '<li> <a href="base/sessiondestroy.php">Deconnexion</a> </li>';
+	}
 ?>
 	</ul>
-
+	
 	<a href="index.php" ><img src="ressources/prise.png" alt="prise"></a>
 
 </nav>
