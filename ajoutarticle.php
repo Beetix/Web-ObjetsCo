@@ -70,7 +70,7 @@
 						if (in_array($ext_upload, $ext_autorisees))
 					{
 						
-							$newnom = $_POST['article_titre'].'.'.$ext_upload;
+							$newnom = $bdd->lastInsertId().'.'.$ext_upload;
 							move_uploaded_file($_FILES['article_photo']['tmp_name'],
 							'images/'.$newnom );
 					}

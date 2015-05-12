@@ -65,7 +65,7 @@
 				<article>
 
 					<h2> <a href="article.php"> <?php echo $article['article_titre']; ?> </a> </h2>
-					<img src="images/<?php echo $article['article_titre']; ?>" alt="<?php echo $article['article_titre']; ?>">
+					<img src="images/<?php echo $article['article_id']; ?>" alt="<?php echo $article['article_titre']; ?>">
 								
 					<h3>  <?php echo $article['article_stitre']; ?> </h3>
 							

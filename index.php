@@ -35,7 +35,7 @@
 		?>
 				
 				<?php echo '<h2> <a href="article.php?article_id=' . $dernierarticle['article_id'] . '"> Dernier article ajouté : ' . $dernierarticle['article_titre'] . '</a> </h2>'; ?>
-							<img src="images/<?php echo $dernierarticle['article_titre']; ?>" alt="<?php echo $dernierarticle['article_titre']; ?>">
+							<img src="images/<?php echo $dernierarticle['article_id']; ?>" alt="<?php echo $dernierarticle['article_titre']; ?>">
 								
 							<h3>  <?php echo $dernierarticle['article_stitre']; ?> </h3>
 							
