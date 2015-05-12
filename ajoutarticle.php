@@ -79,6 +79,7 @@
 			
 			?>
 			<h2> <?php echo "Bravo, vous avez ajouté votre article !"; ?> </h2>
+			<p><a href="article.php?article_id=<?php echo $bdd->lastInsertId(); ?>">Je veux le voir !</a></p>
 
 			<?php 
 			
