@@ -1,5 +1,5 @@
 <?php
-	$pages = array('index' => 'Accueil', 'ajoutarticle' => array('Ajouter un article', 'webmaster'), 'rechercherarticle' => 'Rechercher un article', 'apropos' => 'A propos', 'authentification' => 'Se connecter'); 
+	$pages = array('index' => 'Accueil','tous' => 'Tous les articles', 'ajoutarticle' => array('Ajouter un article', 'webmaster'), 'rechercherarticle' => 'Rechercher un article', 'apropos' => 'A propos', 'authentification' => 'Se connecter'); 
 ?>
 <nav>
 	<ul>
@@ -16,7 +16,7 @@
 				echo '<li> <a href="' . $fichier . '.php">' . $texte . '</a> </li>';
 		}
 	}
-	if (isset($_SESSION['est_admin']))
+	if (isset($_SESSION['utilid']))
 	{
 		echo '<li> <a href="base/sessiondestroy.php">Deconnexion</a> </li>';
 	}

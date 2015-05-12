@@ -65,7 +65,7 @@
 				<article>
 
 					<h2> <a href="article.php"> <?php echo $article['article_titre']; ?> </a> </h2>
-					<img src="ressources/<?php echo $article['article_titre']; ?>.jpg" alt="<?php echo $article['article_titre']; ?>">
+					<img src="images/<?php echo $article['article_titre']; ?>" alt="<?php echo $article['article_titre']; ?>">
 								
 					<h3>  <?php echo $article['article_stitre']; ?> </h3>
 							
@@ -86,16 +86,16 @@
 							while($com = $req_com->fetch())
 							{
 						?>
-								<section>
-									<p>
+								<section style="font-size:small">
+									<h3>
 										<?php echo $com['utilisateur_pseudo'] . ' à posté le ' . $com['com_date']; ?>
-									</p>
+									</h3>
 									<p>
 										<?php echo $com['com_titre']; ?>
 									</p>								
-									<p>
+									<em>
 										<?php echo $com['com_contenu']; ?>
-									</p>
+									</em>
 								</section>
 						<?php
 							}

@@ -8,13 +8,13 @@
 ?>
 		<section id="banniere">
 			
-			<h2> Bienvenue dans le monde des objets connectés ! </h2>
+			<h2> Bienvenue dans le monde des objets connectï¿½s ! </h2>
 			
 			<p>
-				Vous trouverez ici les dernières actualités et les tests d'objets connectés
+				Vous trouverez ici les derniï¿½res actualitï¿½s et les tests d'objets connectï¿½s
 			</p>
 			
-			<p> <i> Dernière mise à  jour du site web le 01/05/2015 </i> </p>
+			<p> <i> Derniï¿½re mise ï¿½ jour du site web le 01/05/2015 </i> </p>
 
 		</section>
 		
@@ -35,7 +35,7 @@
 		?>
 				
 				<?php echo '<h2> <a href="article.php?article_id=' . $dernierarticle['article_id'] . '"> Dernier article ajoutÃ© : ' . $dernierarticle['article_titre'] . '</a> </h2>'; ?>
-							<img src="ressources/<?php echo $dernierarticle['article_titre']; ?>.jpg" alt="<?php echo $dernierarticle['article_titre']; ?>">
+							<img src="images/<?php echo $dernierarticle['article_titre']; ?>" alt="<?php echo $dernierarticle['article_titre']; ?>">
 								
 							<h3>  <?php echo $dernierarticle['article_stitre']; ?> </h3>
 							

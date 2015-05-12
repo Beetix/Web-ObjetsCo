@@ -58,51 +58,27 @@
 					'content' => $_POST['article_contenu'] ) 
 							);
 			
+			// traitement et ajout de la photo de l'article 
 			
-			// paramètres et exécution
-					
+			if ( isset($_FILES['article_photo'])
+				AND $_FILES['article_photo']['error'] == 0
+				AND $_FILES['article_photo']['size'] <= 1048576) 
+				{  
+						$infosfichier = pathinfo($_FILES['article_photo']['name']);
+						$ext_upload = $infosfichier['extension'];
+						$ext_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+						if (in_array($ext_upload, $ext_autorisees))
+					{
+						
+							$newnom = $_POST['article_titre'].'.'.$ext_upload;
+							move_uploaded_file($_FILES['article_photo']['tmp_name'],
+							'images/'.$newnom );
+					}
+				}
 			
-			
-			
-			
-			//if erreurs 
-			
-			//{
-			//	afficher message d'erreur et ne pas ajouter d'entrée sur la bbd
-			//}
-			
-			//else 
-			
-			//{
-				
-					/*  if (isset($_FILES['fichier'])
-						  AND $_FILES['fichier']['error'] == 0
-						  AND $_FILES['fichier']['size'] <= 1048576) {  // 1Mo
-						   $infosfichier = pathinfo($_FILES['fichier']['name']);
-						   $ext_upload = $infosfichier['extension'];
-						   $ext_autorisees = array('jpg', 'jpeg', 'gif', 'png');
-						   if (in_array($ext_upload, $ext_autorisees)) {
-						    move_uploaded_file($_FILES['fichier']['tmp_name'],
-						     'destination/' . basename($_FILES['fichier']['name'])); 
-						   }
-					  }
-				 ?>
-			
-			*/
 			
 			?>
 			<h2> <?php echo "Bravo, vous avez ajouté votre article !"; ?> </h2>
-			<article>
-					<h2> <?php echo "Votre titre"; ?> </h2>
-					<?php 
-					//echo "<img src=".getchemin" alt=".getname.">";
-					?>
-					<h3> <?php echo "Le sous-titre (éventuel ?) "; ?> </h3>
-
-					<p> 
-					<?php echo "contenu de l'article à  récupérer"; ?>
-					</p>
-			</article>
 
 			<?php 
 			

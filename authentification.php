@@ -55,7 +55,7 @@
 				
 									INSERT INTO utilisateurs (`utilisateur_mail`, `utilisateur_name`, `utilisateur_pseudo`, `utilisateur_mdp`, `utilisateur_desc`, `webmaster`)
 									VALUES
-									(:usermail,:usernom,:userpseudo,:usermdp,:userdesc,1);'
+									(:usermail,:usernom,:userpseudo,:usermdp,:userdesc,0);'
 									);
 				$query->execute(array
 								('usermail' => $_POST['mailcrea'],
@@ -82,13 +82,11 @@
 						$_SESSION['utilpseudo'] = $util['utilisateur_pseudo'];
 						if ($util['webmaster'] != 0)
 							$_SESSION['est_admin'] = true;
-	
+						//else 
+						//	$_SESSION['est_admin'] = false;
 						setcookie("utilpseudo", $_SESSION['utilpseudo'], time()+ 3600 * 24,null,null,false,true); // Cookie valable 1 jour
 	
 						echo '<h2> Vous êtes maintenant connecté </h2>';
-						echo 'Vous allez être redirigé automatiquement vers la page d\'accueil dans 4 secondes ...';
-						sleep(5);
-						header("Location: http://iutdoua-webetu.univ-lyon1.fr/~p1414521/index.php");
 					}
 					else
 					{

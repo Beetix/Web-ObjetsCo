@@ -29,7 +29,7 @@
 		if (!empty($_POST['mot-cle']))
 		{
 			$bdd = Connect_db();
-			$reqrech = $bdd->prepare('SELECT article_date, article_titre, article_stitre, article_contenu FROM articles WHERE article_titre LIKE :mot OR article_stitre LIKE :mot OR article_contenu LIKE :mot');
+			$reqrech = $bdd->prepare('SELECT article_date, article_titre, article_stitre, article_contenu,article_id FROM articles WHERE article_titre LIKE :mot OR article_stitre LIKE :mot OR article_contenu LIKE :mot');
 			$reqrech->execute(array('mot' => '%' . $_POST['mot-cle'] . '%'));
 
 	?>
@@ -62,7 +62,7 @@
 									$texte = substr($valeur, 0, 50);
 									if(strlen($valeur) > 50)
 										$texte = $texte . '...';
-									echo '<td>' . $texte . '</td>';
+									echo '<td><a href="article.php?article_id=' . $resultat['article_id'] . '">' . $texte .'</a>'. '</td>';
 								}
 								echo '</tr>';
 							}
