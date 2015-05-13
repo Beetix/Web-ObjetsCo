@@ -33,7 +33,9 @@
 				<?php 
 
 					include('header.php');
-
+					
+					include('aside.php');
+					
 					call_user_func($callback);
 
 					include('footer.php');

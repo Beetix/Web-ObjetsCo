@@ -53,7 +53,8 @@ nav ul a:hover { background-color: #700b7d; color: white; box-shadow: 3px 3px 3p
 article { background-color:rgb(232, 232, 232); box-shadow: 3px 3px 3px #666666; display: inline-block; margin-bottom: 10px;  margin-right:2%; outline: 1px solid black; padding:0px 2% 0px 2% ; text-align:justify; width:90%; }
 
 /*Pour les articles qui doivent cohabiter avec un menu lat�ral (le div nomm� corps)*/
-#corps > article {  width: 67%; }
+body > article {  width: 67%; }
+body > section {  width: 67%; }
 
 article img { border-radius: 200px 200px; float: left; margin-right: 15px; margin:10px; max-height:300px;}
 article > section { background-color:Gainsboro; float:left;padding: 5px; margin-bottom: 20px;}
@@ -94,6 +95,7 @@ section#resultats table, section#resultats th,  section#resultats td {
 	nav ul { width: 70%;} /*min-width:200px; width:70%*/
 	nav ul li { background-color: #FDE5E5; border-bottom: 1px solid black;border-right: 1px solid darkgrey; display: block; margin-left: 0px; margin-right: 0px; margin-bottom:8px; text-align:center; width:100%; }
 	nav a { padding: 2px; }
-	#corps > article { width: 96%; margin-right:0px;}  /* Parce que le padding int�rieur est � 4% (100-2-2 = 96) */
+	body > article { width: 96%; margin-right:0px;}  /* Parce que le padding int�rieur est � 4% (100-2-2 = 96) */
+	body > section { width: 96%; margin-right:0px;}
 	aside { width: 96%;}
 }
