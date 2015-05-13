@@ -48,7 +48,8 @@
 					</tr>
 					<tr>
 						<td>Nombre de messages postés :</td>
-						<td><?php 
+						<td>
+						<?php 
 							$req_total_com = $bdd-> prepare('SELECT COUNT(*) as nbtotal FROM commentaires WHERE com_ref_auteur_id= :idbis');
 							$req_total_com->execute(array('idbis' => $id));
 							while($com_total = $req_total_com->fetch())
@@ -69,4 +70,21 @@
 	<?php 
 	}
 	?>
+		<section>
+		<h2>Rechercher un article</h2>
+		<form method="post" action="rechercherarticle.php">	<!--  echo $_SERVER['PHP_SELF']; ?> -->
+			<fieldset>
+				<legend>Outils de recherche</legend>				
+					<table>
+						<tr>
+							<th>Recherche</th> 
+							<td><input type="text" name="mot-cle" placeholder=""></td>
+							<td rowspan=3><button type="submit" value="rechercher"><img src="ressources/Loupe.png" width=50px height=50px ></button> </td>
+						</tr>
+					</table>
+				
+			</fieldset>
+
+		</form>	
+	</section>
 </aside>
